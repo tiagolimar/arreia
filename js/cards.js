@@ -7,12 +7,12 @@ async function getData() {
 async function main(){
     const dados = await getData();
     imprimir(dados.map(user=>criarCard(user)).join(''));
-    imprimir(Object.keys(dados[0]))
+    imprimir(`<p class="w-full">${Object.keys(dados[0])}</p>`)
 }
 
 function criarCard(user){
     return `
-        <div class="container relative border border-black rounded bg-white hover:shadow-lg hover:bg-stone-200 pointer-cursor duration-200 flex flex-col items-center p-4 w-[80%] mx-auto">
+        <div class="container flex-1 relative border border-black rounded bg-white hover:shadow-lg hover:bg-stone-200 pointer-cursor duration-200 flex flex-col items-center p-4 w-auto mx-auto">
             <div class="absolute top-2 right-2 border border-pink-300 rounded-full w-8 h-8 flex items-center justify-center bg-pink-100">
                 ${user.id}
             </div>
@@ -29,4 +29,4 @@ function criarCard(user){
     `;
 }
 
-// main();
+main();

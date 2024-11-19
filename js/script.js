@@ -1,5 +1,5 @@
 function imprimir(text) {
-    display.innerHTML += p(text);
+    display.innerHTML += text;
 }
 
 function p(text,className=''){

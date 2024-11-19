@@ -41,4 +41,4 @@ function main(){
     controller[executarMenu()]();
 }
 
-main();
+// main();
